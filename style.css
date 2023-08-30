@@ -1,9 +1,24 @@
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 3px !important;
+  margin: 0px !important;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+  body{
+    margin: 0%;
+    padding: 0%;
+
+  }
+
+
   .cardConatianor1 {
     background: #fafafa;
     width: 100%;
@@ -19,9 +34,9 @@
     margin-bottom: 0px;
   }
   
-  .cardConatianor1 h2 {
+  .heading {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: bolder;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 60px;
@@ -50,11 +65,11 @@
   .citiesCantainor {
     background: #fff;
     width: 100%;
-    height: 80%
+    height: auto
   }
   
   
-  .citiesCantainor>h3 {
+  .heading{
     font-weight: 900;
     color: #8a8a8f;
     line-height: 1em;
@@ -66,63 +81,49 @@
     text-align: center;
   }
   
-  .cityCardsContainor {
+  .CardsContainor {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50vh;
-  
-    padding: 0% !important;
+    height: 100%; 
+    width: 82%;
+    padding: 0px !important;
   }
-  
+
+
   
   
   .card {
-    width: 107%;
-    height: 33vh;
+    width: 100%;
+    height: 33%;
     position: relative;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 1px !important;
     box-shadow: 0 4px 8px rgba(5, 5, 5, 0.1);
-    margin-bottom: 10px;
     cursor: pointer;
+    padding-left: 0px !important;
+  
+  
   }
   
   .image-container {
     overflow: hidden;
     transition: transform 0.5s;
-    height: 33vh;
+    height: 200px;
     width: 100%;
-    opacity: 1.96;
+    opacity: 1;
   
   }
-  
-  @media (max-width: 991px) {
-    .image-container {
-      height: 45vh;
-      width: 100%;
-    }
+  .image-container img{
+    width: 100%;
+    height: 100%;
   }
-  
-  @media (max-width: 767px) {
-    .image-container {
-      height: 105%;
-      width: 105%;
-    }
-  
-    .card .btn {
-      bottom: 20px;
-    }
-  
-    .card .content {
-      bottom: 60px;
-      opacity: 0.9;
-    }
-  }
-  
-  
+
+
+
+
+
+
+
   
   
   
@@ -130,6 +131,7 @@
   
   .card:hover .image-container {
     transform: scale(1.1);
+  
   }
   
   .image-container img {
@@ -137,6 +139,7 @@
     height: 100%;
     display: block;
     box-shadow: 0 4px 8px rgba(5, 5, 5, 0.1);
+    
   
   }
   
@@ -154,9 +157,10 @@
   .card:hover .content {
     bottom: 70px;
     opacity: 0.9;
+    
   }
   
-  .content>h2 {
+  .content h2 {
     margin: 0;
     font-size: 1.5rem;
     color: #fff;
@@ -193,20 +197,88 @@
   
   
   
-  .cuisinesCantainor {
-    background: #fff;
-    width: 100%;
-    height: 70vh;
-  }
-  
-  .cuisinesCantainor>h3 {
+
+  .heading {
     font-weight: 900;
     color: #8a8a8f;
     line-height: 1em;
     opacity: .6;
-    margin: 2rem;
+    margin: 5rem;
     position: relative;
     z-index: 1;
     font-size: 5rem;
     text-align: center;
   }
+
+  .cuisinesContainor{
+      background: #fafafa;
+      padding: 1rem;
+      width: 100%;
+      height: auto
+    }
+  
+  .section{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .recipeContainor{
+    background: #fafafa;
+    padding: 1rem;
+    width: 100%;
+    height: auto
+  }
+
+
+
+
+
+  @media (max-width: 991px)  {
+    .image-container {
+      height: 300px;
+      width: 100%;
+    }
+    .CardsContainor{
+      width: 100%;
+      margin: 0;
+    }
+
+  
+  }
+  
+  @media (max-width: 767px)  {
+    .image-container {
+      height: 100%;
+      width: 100%;
+    }
+    .CardsContainor{
+      width: 100%;
+    }
+
+
+    .card .btn {
+      bottom: 20px;
+      padding: 4px 9px;
+      font-size: 12px;
+
+    }
+  
+    .card .content {
+      bottom: 60px;
+      opacity: 0.9;
+    }
+    .content h2{
+      font-size: 20px;
+    }
+  
+    .heading {
+      font-weight: 900;
+  font-size: 30px;
+    }
+  
+   
+  }
+
+  
+  
